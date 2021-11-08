@@ -28,3 +28,5 @@ jobs:
       run: ./gradlew build
     - name: Test with Gradle
       run: ./gradlew test
+    - name: Show File Tree
+      run: tree

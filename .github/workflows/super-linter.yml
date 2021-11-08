@@ -26,5 +26,5 @@ jobs:
         env:
           VALIDATE_ALL_CODEBASE: false
           DEFAULT_BRANCH: master
-          JAVA_FILE_NAME: ./ewu-cscd212.xml
+          JAVA_FILE_NAME: ewu-cscd212.xml
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

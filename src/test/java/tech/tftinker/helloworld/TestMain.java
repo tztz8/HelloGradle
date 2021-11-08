@@ -23,4 +23,9 @@ public class TestMain {
 
         System.setOut(outputStream);
     }
+
+    @Test
+    public void thisTestWillPass() {
+        assertTrue(true);
+    }
 }

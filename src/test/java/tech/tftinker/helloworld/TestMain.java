@@ -19,10 +19,12 @@ public class TestMain {
 
         Main.main(new String[0]);
 
-        assertEquals(outputText, myOut.toString().replace("\r",""));
+        assertEquals(outputText, myOut.toString().replace("\r", ""));
 
         System.setOut(outputStream);
     }
+
+    // TODO: add more test
 
     @Test
     public void thisTestWillPass() {

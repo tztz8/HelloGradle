@@ -8,10 +8,10 @@ import java.io.PrintStream;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class TestMain {
+    private String outputText = "Hello Gradle and Github Actions!\n";
+
     @Test
     public void testOutputOfMain() {
-        String outputText = "Hello Gradle and Github Actions!\n";
-
         PrintStream outputStream = System.out;
 
         ByteArrayOutputStream myOut = new ByteArrayOutputStream();

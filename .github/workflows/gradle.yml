@@ -35,6 +35,7 @@ jobs:
       uses: nikitasavinov/checkstyle-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
+        reporter: 'github-check'
         checkstyle_config: ./ewu-cscd212.xml
     - name: Show File Tree
       if: always()

@@ -31,10 +31,11 @@ jobs:
       if: always() # always run even if the previous step fails
       with:
         report_paths: '**/build/test-results/test/TEST-*.xml'
-    - name: Get CheckStyle
-      run: wget https://github.com/checkstyle/checkstyle/releases/download/checkstyle-9.1/checkstyle-9.1-all.jar
-    - name: Run CheckStyle
-      run: java -jar checkstyle-9.1-all.jar -c ./ewu-cscd212.xml src/
+    - name: Run check style
+      uses: nikitasavinov/checkstyle-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        checkstyle_config: ./ewu-cscd212.xml
     - name: Show File Tree
       if: always()
       run: tree

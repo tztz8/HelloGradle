@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class TestMain {
     @Test
     public void testOutputOfMain() {
-        String outputText = "Hello World!\n";
+        String outputText = "Hello Gradle and Github Actions!\n";
 
         PrintStream outputStream = System.out;
 
@@ -22,10 +22,5 @@ public class TestMain {
         assertEquals(outputText, myOut.toString().replace("\r",""));
 
         System.setOut(outputStream);
-    }
-
-    @Test
-    public void thisTestWillFail() {
-        fail("This test will Fail");
     }
 }

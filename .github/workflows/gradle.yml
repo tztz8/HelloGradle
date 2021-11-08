@@ -34,7 +34,7 @@ jobs:
     - name: Get CheckStyle
       run: wget https://github.com/checkstyle/checkstyle/releases/download/checkstyle-9.1/checkstyle-9.1-all.jar
     - name: Run CheckStyle
-      run: java com.puppycrawl.tools.checkstyle.Main -c ./github/linters/ewu-cscd212.xml src/
+      run: java -jar checkstyle-9.1-all.jar -c ./github/linters/ewu-cscd212.xml src/
     - name: Show File Tree
       if: always()
       run: tree

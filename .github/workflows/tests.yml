@@ -41,7 +41,8 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         reporter: 'github-check'
-        level: warning
+        level: info
+        tool_name: 'reviewdog-info'
         #checkstyle_config: https://github.com/tztz8/HelloGradle/raw/master/ewu-cscd212.xml
         checkstyle_config: https://github.com/tztz8/HelloGradle/raw/master/ewu-cscd212-info.xml
     - name: Run check style warning
@@ -51,6 +52,7 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         reporter: 'github-check'
         level: warning
+        tool_name: 'reviewdog-warning'
         #checkstyle_config: https://github.com/tztz8/HelloGradle/raw/master/ewu-cscd212.xml
         checkstyle_config: https://github.com/tztz8/HelloGradle/raw/master/ewu-cscd212-warning.xml
     - name: Run check style error
@@ -60,6 +62,7 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         reporter: 'github-check'
         level: error
+        tool_name: 'reviewdog-error'
         #checkstyle_config: https://github.com/tztz8/HelloGradle/raw/master/ewu-cscd212.xml
         checkstyle_config: https://github.com/tztz8/HelloGradle/raw/master/ewu-cscd212-error.xml
     # Helps with debugging

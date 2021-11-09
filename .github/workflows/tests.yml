@@ -35,8 +35,9 @@ jobs:
       with:
         report_paths: '**/build/test-results/test/TEST-junit-jupiter.xml'
     # run and post the checkstyle test
-    - name: Run check style
+    - name: Get noTest.xml
       run: wget noTest.xml
+    - name: Run check style
       uses: nikitasavinov/checkstyle-action@master
       if: always() # always run even if the previous step fails
       with:

@@ -6,6 +6,8 @@ public class Main {
      * @param args this require of java
      */
     public static void main(String[] args) {
-        System.out.println("Hello Gradle and Github Actions!");
+        {
+            System.out.println("Hello Gradle and Github Actions!");
+        }
     }
 }

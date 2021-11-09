@@ -56,20 +56,5 @@
         <module name="UpperEll">
             <property name="severity" value="warning"/>
         </module>
-
-        <!--
-            EWU CSCD 212 Stu
-        -->
-        <module name="FinalLocalVariable">
-            <property name="severity" value="error"/>
-            <property name="tokens" value="PARAMETER_DEF"/>
-        </module>
-        <module name="RequireThis">
-            <property name="severity" value="error"/>
-            <property name="validateOnlyOverlapping" value="false"/>
-        </module>
-        <module name="MissingOverride">
-            <property name="severity" value="error"/>
-        </module>
     </module>
 </module>

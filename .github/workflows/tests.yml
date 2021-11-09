@@ -35,15 +35,14 @@ jobs:
       with:
         report_paths: '**/build/test-results/test/TEST-junit-jupiter.xml'
     # run and post the checkstyle test
-    - name: Get noTest.xml
-      run: wget https://raw.githubusercontent.com/tztz8/HelloGradle/master/noTest.xml
     - name: Run check style
       uses: nikitasavinov/checkstyle-action@master
       if: always() # always run even if the previous step fails
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         reporter: 'github-check'
-        checkstyle_config: https://raw.githubusercontent.com/tztz8/HelloGradle/master/ewu-cscd212-noTest.xml noTest.xml
+        level: warning
+        checkstyle_config: https://github.com/tztz8/HelloGradle/raw/master/ewu-cscd212.xml
     # Helps with debugging
     - name: Show File Tree
       if: always()

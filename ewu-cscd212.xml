@@ -330,6 +330,14 @@
         </module>
 
         <!--
+            Check Javadoc
+            See https://checkstyle.sourceforge.io/config_javadoc.html
+        -->
+        <module name="MissingJavadocMethod">
+            <property name="severity" value="warning"/>
+        </module>
+
+        <!--
             EWU CSCD 212 Stu
         -->
         <module name="FinalLocalVariable">

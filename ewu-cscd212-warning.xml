@@ -56,5 +56,14 @@
         <module name="UpperEll">
             <property name="severity" value="warning"/>
         </module>
+
+
+        <!--
+            Check Javadoc
+            See https://checkstyle.sourceforge.io/config_javadoc.html
+        -->
+        <module name="MissingJavadocMethod">
+            <property name="severity" value="warning"/>
+        </module>
     </module>
 </module>

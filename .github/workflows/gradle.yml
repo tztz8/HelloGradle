@@ -21,16 +21,22 @@ jobs:
       with:
         java-version: '16'
         distribution: 'adopt'
-        cache: gradle
-    - name: Grant execute permission for gradlew
-      run: chmod +x gradlew
-    - name: Build with Gradle
-      run: ./gradlew build
+#        cache: gradle
+#    - name: Grant execute permission for gradlew
+#      run: chmod +x gradlew
+#    - name: Build with Gradle
+#      run: ./gradlew build
+    - name: Get Junit Launcher
+      run: wget https://repo1.maven.org/maven2/org/junit/platform/junit-platform-console-standalone/1.8.1/junit-platform-console-standalone-1.8.1.jar
+    - name: Build Code for testing
+      run: javac -cp junit-platform-console-standalone-1.8.1.jar -d build/classes/ci src/*/java/*/*/*/*.java
+    - name: Run junit test
+      run: java -jar junit-platform-console-standalone-1.8.1.jar --reports-dir=build/test-results/test -cp build/classes/ci --scan-classpath
     - name: Publish Test Report
       uses: mikepenz/action-junit-report@v2
       if: always() # always run even if the previous step fails
       with:
-        report_paths: '**/build/test-results/test/TEST-*.xml'
+        report_paths: '**/build/test-results/test/TEST-junit-jupiter.xml'
     - name: Run check style
       uses: nikitasavinov/checkstyle-action@master
       if: always()

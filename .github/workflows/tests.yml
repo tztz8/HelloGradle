@@ -41,6 +41,7 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         reporter: 'github-check'
+        exclude: ./src/test/java/*/*/*/Test*.java
         checkstyle_config: https://github.com/tztz8/HelloGradle/raw/master/ewu-cscd212.xml
     # Helps with debugging
     - name: Show File Tree
